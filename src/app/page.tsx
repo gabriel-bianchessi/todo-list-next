@@ -1,4 +1,5 @@
 'use client'
+import CreateTodo from '@/components/CreateTodo'
 import Todo from '@/components/Todo'
 import { useTodos } from '@/hooks/useTodos'
 
@@ -12,6 +13,7 @@ export default function Home() {
         <span>Just keep it simple</span>
       </header>
       <main className="bg-zinc-700 p-6 rounded-lg w-80">
+        <CreateTodo />
         {todos.map((todo) => {
           return <Todo key={todo.id} {...todo} />
         })}
